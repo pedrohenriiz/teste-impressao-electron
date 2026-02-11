@@ -4,7 +4,7 @@ import { electronAPI } from '@electron-toolkit/preload'
 // Custom APIs for renderer
 const api = {
   previewReceipt: () => ipcRenderer.invoke('preview-receipt'),
-  printBase64Pdf: (base64: string) => ipcRenderer.invoke('print-base64', base64)
+  printBase64Pdf: (base64: string) => ipcRenderer.invoke('print-pdf-base64', base64)
 }
 
 if (process.contextIsolated) {
